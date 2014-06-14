@@ -39,7 +39,27 @@
         [self.blogPost.jsonMutable addObject:bp];
     }
     
+    self.tableView.contentInset = UIEdgeInsetsMake(0.0f, -10.0f, 0.0f, 0.0f);
     
+    // Initialize Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    
+    // Configure Refresh Control
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    
+    // Configure View Controller
+    [self setRefreshControl:refreshControl];
+    
+    
+}
+
+- (void)refresh:(id)sender
+{
+    NSLog(@"Refreshing");
+    [self.tableView reloadData];
+    
+    // End Refreshing
+    [(UIRefreshControl *)sender endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning
