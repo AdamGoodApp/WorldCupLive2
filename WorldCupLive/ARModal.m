@@ -73,4 +73,31 @@
     return [bstArray objectAtIndex:0];
 }
 
+-(UIImage *)imageUI {
+    
+    NSArray *imageArray = @[[UIImage imageNamed:@"Algeria"],[UIImage imageNamed:@"Argentina"],[UIImage imageNamed:@"Australia"],[UIImage imageNamed:@"Belgium"],[UIImage imageNamed:@"Bosnia-Herzegovina"],[UIImage imageNamed:@"Switzerland"],[UIImage imageNamed:@"Uruguay"],[UIImage imageNamed:@"USA"],[UIImage imageNamed:@"Brazil"],[UIImage imageNamed:@"Cameroon"],[UIImage imageNamed:@"Chile"],[UIImage imageNamed:@"Colombia"],[UIImage imageNamed:@"Costa Rica"],[UIImage imageNamed:@"Côte d'Ivoire"],[UIImage imageNamed:@"Croatia"],[UIImage imageNamed:@"Ecuador"],[UIImage imageNamed:@"England"],[UIImage imageNamed:@"France"],[UIImage imageNamed:@"Germany"],[UIImage imageNamed:@"Ghana"],[UIImage imageNamed:@"Greece"],[UIImage imageNamed:@"Honduras"],[UIImage imageNamed:@"Iran"],[UIImage imageNamed:@"Italy"],[UIImage imageNamed:@"Japan"],[UIImage imageNamed:@"Mexico"],[UIImage imageNamed:@"Netherlands"],[UIImage imageNamed:@"Nigeria"],[UIImage imageNamed:@"Portugal"],[UIImage imageNamed:@"Russia"],[UIImage imageNamed:@"South Korea"],[UIImage imageNamed:@"Spain"]];
+    
+    int random = arc4random_uniform(imageArray.count);
+    return [imageArray objectAtIndex:random];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

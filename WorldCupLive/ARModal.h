@@ -25,5 +25,6 @@
 
 -(NSURL *)jsonURL;
 -(NSString *)bst;
+-(UIImage *)imageUI;
 
 @end

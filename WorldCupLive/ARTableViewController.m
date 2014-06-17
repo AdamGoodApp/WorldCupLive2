@@ -39,6 +39,8 @@
         [self.blogPost.jsonMutable addObject:bp];
     }
     
+    [self randomBackgroundImage];
+    
     self.tableView.contentInset = UIEdgeInsetsMake(0.0f, -10.0f, 0.0f, 0.0f);
     
     // Initialize Refresh Control
@@ -50,13 +52,20 @@
     // Configure View Controller
     [self setRefreshControl:refreshControl];
     
-    
+}
+
+-(void)randomBackgroundImage {
+    UIImage *image = self.blogPost.imageUI;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.tableView.backgroundView = imageView;
+    self.tableView.backgroundView.layer.zPosition -= 1;
 }
 
 - (void)refresh:(id)sender
 {
     NSLog(@"Refreshing");
     [self.tableView reloadData];
+    [self randomBackgroundImage];
     
     // End Refreshing
     [(UIRefreshControl *)sender endRefreshing];
@@ -94,6 +103,8 @@
     cell.textLabel.text = [[[[[post.home stringByAppendingString:@" "]stringByAppendingString:@" "] stringByAppendingString:post.bst] stringByAppendingString:@" "] stringByAppendingString:post.away];
     cell.detailTextLabel.text = post.info;
     cell.imageView.image = image;
+    cell.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.000];
+   
     
     return cell;
 }

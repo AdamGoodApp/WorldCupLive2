@@ -461,6 +461,7 @@
 				66899455194CBA510027062A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66899456194CBA510027062A /* Build configuration list for PBXNativeTarget "WorldCupLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				66899458194CBA510027062A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
